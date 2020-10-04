@@ -20,13 +20,13 @@ public class MathApp {
 		
 		ICalculator add = (a,b) -> a+b;
 		ICalculator subtract = (a,b) -> a-b;
-		ICalculator divide = (a,b) -> { 
-										try { 
-											return a/b;
-										}catch(ArithmeticException e) {
-											return 0;
-										}
-									};
+		ICalculator divide = (a,b) -> {
+			try { 
+				return a/b;
+			}catch(ArithmeticException e) {
+				return 0;
+			}
+		};
 		
 		System.out.println("Addition of 6 and 5 is "+add.calculate(6,5));
 		System.out.println("Subtraction of 8 from 10 is "+subtract.calculate(10,8));
