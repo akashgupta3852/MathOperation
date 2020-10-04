@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 @FunctionalInterface
 interface ICalculator{
@@ -68,6 +69,8 @@ public class MathApp {
 		//Using Implicit Lambda Function
 		numberPlayList.forEach((n) -> {System.out.println("Using implicit lambda function, element in the number list : "+n);});
 		
+		Function<Integer, Double> integertoDouble = n -> n.doubleValue();
+		numberPlayList.forEach((n) -> {System.out.println("After conversion, element in the number list : "+integertoDouble.apply(n));});
 	}
 
 }
